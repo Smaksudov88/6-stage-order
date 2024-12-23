@@ -15,6 +15,19 @@
   font-family: inherit;
 }
 
+.custom-input__field[disabled] {
+  background-color: #ffffff;
+  border-color: rgba(173, 173, 173, 0.4);
+}
+
+.custom-input__field[disabled] + .custom-input__label {
+  color: rgba(173, 173, 173, 0.4)
+}
+
+.custom-input__field[disabled]::placeholder {
+  color: rgba(173, 173, 173, 0.4)
+}
+
 .custom-input__label {
   font-weight: 700;
   font-size: 14px;
@@ -28,3 +41,4 @@
   padding: 1px 4px;
   user-select: none;
 }
+
