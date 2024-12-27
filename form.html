@@ -28,6 +28,14 @@
         
       </a>
       <div class="header__users">
+        <form class="header__search" action="#" method="get" >
+          <div class="custom-search">
+            <input class="custom-search__field" type="search" name="search-field" placeholder="Поиск"  aria-label="Поиск">
+            <svg class="custom-search__icon" width="18" height="18" aria-hidden="true">
+              <use xlink:href="images/sprite.svg#icon-search"></use>
+            </svg>
+          </div>
+        </form>
         <ul class="header__user-list">
           <li class="header__user-item">
             <a class="header__user-link" href="#" aria-label="Перейти в корзину">
@@ -108,19 +116,21 @@
             <fieldset class="order-form__group">
               <legend class="order-form__group-name">Покупатель</legend>
               <div class="order-form__inner">
-                <div class="custom-input">
+                <div class="custom-input custom-input--error">
                   <input class="custom-input__field" type="text" name="user-last-name" id="user-last-name" placeholder="Кириллов" required>
                   <label class="custom-input__label" for="user-last-name" >Фамилия *</label>
+                  <span class="custom-input__error">Данное поле должно быть заполнено</span>
                 </div>
                 <div class="custom-input">
-                  <input class="custom-input__field" type="text" name="user-name" id="user-name" placeholder="Олег required">
+                  <input class="custom-input__field" type="text" name="user-name" id="user-name" placeholder="Олег " required>
                   <label class="custom-input__label" for="user-name" >Имя *</label>
+                  <span class="custom-input__error">Данное поле должно быть заполнено</span>
                 </div>
                 <div class="custom-input">
                   <input class="custom-input__field" type="text" name="user-surname" id="user-surname" placeholder="Андреевич" >
                   <label class="custom-input__label" for="user-surname" >Отчество</label>
                 </div>
-                <div class="custom-checkbox">
+                <div class="custom-checkbox custom-checkbox-error">
                   <input class="custom-checkbox__field visually-hidden" type="checkbox" id="client-true" name="client-true">
                   <label class="custom-checkbox__label" for="client-true">
                     <span class="custom-checkbox__heading">Стать постоянный клиентом</span>
@@ -136,6 +146,56 @@
                 </div>
               </div>
             </fieldset>
+
+            <!-- Контактная информация-->
+            <fieldset class="order-form__group">
+              <legend class="order-form__group-name">Контактная информация</legend>
+              <div class="order-form__inner">
+                <div class="custom-input custom-input-icon">
+                  <input class="custom-input__field" type="tel" name="user-phone" id="user-phone" placeholder="+7999999999">
+                  <label class="custom-input__label" for="user-phone" >Телефон</label>
+                  <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-phone-input"></use>
+                  </svg>
+                </div>
+                <div class="custom-input custom-input-icon">
+                  <input class="custom-input__field" type="email" name="user-mail" id="user-mail" placeholder="mail@mail.ru">
+                  <label class="custom-input__label" for="user-mail" >Почта</label>
+                  <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-mail"></use>
+                  </svg>
+                </div>
+              </div>
+              </fieldset>
+
+                  <!-- Комментарий к заказу-->
+            <fieldset class="order-form__group">
+              <legend class="order-form__group-name">Комментарий к заказу</legend>
+              <div class="order-form__inner">
+                <div class="custom-textarea">
+                  <textarea class="custom-textarea__field" name="comment" aria-label="Введите ваш комментарий"  placeholder="Введите ваш комментарий"></textarea>
+                </div>
+              </div>
+              </fieldset>
+
+              <!-- Бонусы / скидки-->
+            <fieldset class="order-form__group">
+              <legend class="order-form__group-name">Бонусы / скидки</legend>
+              <div class="order-form__inner">
+                <div class="custom-input">
+                  <input class="custom-input__field" type="text" name="promo" id="promo" value="GP314-20" placeholder="Введите промокод">
+                  <label class="custom-input__label" for="promo" >Промокод</label>
+                  <button class="custom-input__button" type="button" aria-label="очистить поле">
+                    <svg class="custom-input__button-icon" width="12" height="12" aria-hidden="true">
+                      <use xlink:href="images/sprite.svg#icon-close"></use>
+                    </svg>
+                  </button>
+                
+                </div>
+              
+              </div>
+              </fieldset>
+
             <!-- Доставка -->
             <fieldset class="order-form__group">
               <legend class="order-form__group-name">Доставка</legend>
@@ -222,6 +282,17 @@
                 </div>
               </div>
             </fieldset>
+           <div class="custom-checkbox">
+            <input class="custom-checkbox__field visually-hidden" type="checkbox" id="agree" name="agree">
+            <label class="custom-checkbox__label" for="agree">
+              <span class="custom-checkbox__heading">Нажимая кнопку, вы соглашаетесь на  <a href="#" class="custom-checkbox__link">обработку ваших персональных данных</a></span>
+              
+              <svg class="custom-checkbox__icon" width="18" height="13" aria-hidden="true" >
+                <use xlink:href="images/sprite.svg#icon-check"></use>
+              </svg>
+            </label>
+          </div>
+          <button class="order-form__btn btn btn--size-xl" type="submit">Оформить заказ</button>
           </form>
         </div>
         <div class="order__right-col">

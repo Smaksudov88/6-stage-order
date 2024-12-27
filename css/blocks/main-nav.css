@@ -15,6 +15,8 @@
   flex-wrap: wrap;
 }
 
+
+
 .main-nav__link {
   display: flex;
   align-items: center;
@@ -23,4 +25,14 @@
   line-height: 14px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.main-nav__link:hover {
+  color: rgba(71, 80, 9, 0.7);
+}
+
+.main-nav__link:focus-visible {
+  outline: 1px solid rgba(71, 80, 9, 0.7);
+  outline-offset: 2px;
+
 }
